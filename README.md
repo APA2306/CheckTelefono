@@ -1,18 +1,23 @@
-# CheckTelefono
+# Check Telefono
 
-Programma che dato in input una qualsiasi quantità di stringhe rappresentanti dei numeri di telefono restituisce al programma quelli che sono plausibili come numeri reali
+Ricevuto come parametro un vettore di string, ritornare al chiamante la prima stringa che assomiglia molto ad un numero di telefono cellulare italiano ovvero:
+- che inizia con +39 (esattamente lungo  13)
+- oppure con 0039 (esattamente lungi 14)
+- oppure con un 3 (esattamente lungo 10)
 
-# Svolgimemento
+Se il numero non viene trovato, ritornare strunga vuota ""
 
-Il programma è contenuto in un'unico Foreach che per ogni Numero in input controlla con una serie di If se il numero può essere valido.
-I casi in cui un numero è valido sono tre:
+Ad esempio.
+Se arriva "05417373", "3367726712",  "778823"
+Tornare "3367726712"
 
-1. Se il numero è lungo tredici caratteri e inizia con +39
-2. Se il numero è lungo quattordici caratteri e inizia con 0039
-3. Se il numero è lungo dieci caratteri e inizia con un 3
+Se arriva "33677267", "33677232",  "778823"
+Tornare ""
 
-Se il programma si rende conto che nessuno dei tre criteri non è rispettato non ritornerà la stringa al programma.
+Se arriva "", "05417723",  "+391231231234"
+Tornare "+391231231234"
 
-# Immaggine ciclo
+Se arriva "3", "05417723",  "00391231231230"
+Tornare ""
 
-![CheckTelefono ciclo](https://github.com/APA2306/CheckTelefono/assets/127589937/65d3df56-df49-4d67-9318-1ef3552a51ba)
+etc
